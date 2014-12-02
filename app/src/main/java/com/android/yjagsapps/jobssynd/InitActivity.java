@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-// This class is by Jags
+// This class is by Jags 1
 public class InitActivity extends ActionBarActivity {
 
     @Override
