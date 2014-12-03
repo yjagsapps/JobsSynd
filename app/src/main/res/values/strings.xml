@@ -4,5 +4,13 @@
     <string name="app_name">Jobs Synd</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_start">StartActivity</string>
+    <string name="title_activity_socareers">SOCareersActivity</string>
+
+
+    <string name="title">Title goes here!</string>
+    <string name="date">Date goes here!</string>
+
+
 
 </resources>
