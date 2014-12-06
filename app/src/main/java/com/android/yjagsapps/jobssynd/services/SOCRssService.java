@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.android.yjagsapps.jobssynd.JobListAdaptor;
 import com.android.yjagsapps.jobssynd.R;
@@ -34,16 +35,16 @@ public class SOCRssService extends AsyncTask<String, Void, List<Job>>{
     private ListView socListView;
 
     public SOCRssService(Activity jobsActivity) {
-        //context = socListView.getContext();
+        //context = jobsActivity;
         context = jobsActivity;
         this.socListView = (ListView) jobsActivity.findViewById(R.id.listView);
-        //progress = new ProgressDialog(context);
-        //progress.setMessage("Loading...");
+        progress = new ProgressDialog(context);
+        progress.setMessage("Loading...");
     }
 
     protected void onPreExecute() {
         Log.e("ASYNC", "PRE EXECUTE");
-        //progress.show();
+        progress.show();
     }
 
     @Override
@@ -109,7 +110,11 @@ public class SOCRssService extends AsyncTask<String, Void, List<Job>>{
 
             }
         });
+        progress.dismiss();
 
+        //Display the number of jobs
+        Toast toast = Toast.makeText(context, jobs.size() + " Jobs displayed",Toast.LENGTH_SHORT);
+        toast.show();
 
     }
 }

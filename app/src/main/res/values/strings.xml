@@ -10,7 +10,7 @@
 
     <string name="title">Title goes here!</string>
     <string name="date">Date goes here!</string>
-
+    <string name="title_activity_sosearch">Search Jobs</string>
 
 
 </resources>

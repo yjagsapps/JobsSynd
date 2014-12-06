@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#80ff3d38"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+            <EditText
+                android:id="@+id/TextViewJobTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter job title"
+                android:textSize="30dp"></EditText>
+
+            <EditText
+                android:id="@+id/TextViewJobSkill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter job skill"
+                android:textSize="30dp"></EditText>
+
+            <EditText
+                android:id="@+id/TextViewJobLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="Enter job location"
+                android:textSize="30dp"></EditText>
+
+            <Button
+                android:id="@+id/btnSearchJobs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Search Jobs"
+                android:textSize="30dp" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:background="@color/background_floating_material_light">
+
+            <Button
+                android:id="@+id/btnSearchAllJobs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Search All Jobs"
+                android:textSize="40dp"
+                android:onClick="searchAllJobs"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

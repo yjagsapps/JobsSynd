@@ -17,12 +17,21 @@
         </activity>
 
         <activity
-            android:name="com.android.yjagsapps.jobssynd.SOCareersActivity"
-            android:label="@string/title_activity_socareers" >
+            android:name="com.android.yjagsapps.jobssynd.SOSearchActivity"
+            android:label="@string/title_activity_sosearch" >
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+        </activity>
+
+
+        <activity
+            android:name="com.android.yjagsapps.jobssynd.SOCareersActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_socareers" >
         </activity>
     </application>
 
