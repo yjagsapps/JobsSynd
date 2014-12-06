@@ -8,7 +8,15 @@ public class Job {
     private String jobTitle;
     private String jobLocation;
     private String pubDate;
+    private String jobURL;
 
+    public String getJobURL() {
+        return jobURL;
+    }
+
+    public void setJobURL(String jobURL) {
+        this.jobURL = jobURL;
+    }
 
     public String getPubDate() {
         return pubDate;

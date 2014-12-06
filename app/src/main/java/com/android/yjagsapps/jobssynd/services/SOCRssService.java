@@ -3,13 +3,19 @@ package com.android.yjagsapps.jobssynd.services;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.util.Log;
+import android.view.View;
+import android.webkit.WebView;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.yjagsapps.jobssynd.JobListAdaptor;
 import com.android.yjagsapps.jobssynd.R;
+import com.android.yjagsapps.jobssynd.SoCareersDetailsActivity;
 import com.android.yjagsapps.jobssynd.util.Job;
 import com.android.yjagsapps.jobssynd.services.RssHandler;
 
@@ -106,6 +112,37 @@ public class SOCRssService extends AsyncTask<String, Void, List<Job>>{
                 //ListView list = (ListView) socDisplayAct.findViewById(R.id.listView);
                 socListView.setAdapter(adaptor);
                 adaptor.notifyDataSetChanged();
+
+                socListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        //Get the job description URL
+                        //Intent  intent = new Intent(this,SOCareersActivity.class);
+
+                        //TextView textViewJobTitle = (TextView) findViewById(R.id.title);
+                        //String messageJobTitle = textViewJobTitle.getText().toString();
+                        //intent.putExtra("jobSkill", message);
+                        //startActivity(intent);
+
+                        TextView txtJobURL = (TextView) view.findViewById(R.id.jobURL);
+                        String strJobURL = txtJobURL.getText().toString();
+
+                        //Toast toast = Toast.makeText(context, " Job URL is :  " + strJobURL ,Toast.LENGTH_SHORT);
+                        //toast.show();
+
+                        //WebView myWebView = (WebView) view.findViewById(R.id.webviewjobdetails);
+                        //myWebView.loadUrl(strJobURL);
+
+                        //Display Job Details Activity
+                        Intent intentJobDetail = new Intent(context,SoCareersDetailsActivity.class);
+
+                        //TextView textViewJobTitle = (TextView) findViewById(R.id.title);
+                        //String messageJobTitle = textViewJobTitle.getText().toString();
+                        intentJobDetail.putExtra("jobURL", strJobURL);
+                        context.startActivity(intentJobDetail);
+
+                    }
+                });
                 //progress.dismiss();
 
             }

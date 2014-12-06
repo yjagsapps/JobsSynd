@@ -33,6 +33,13 @@
             android:configChanges="orientation|screenSize|keyboardHidden"
             android:label="@string/title_activity_socareers" >
         </activity>
+
+        <activity
+            android:name="com.android.yjagsapps.jobssynd.SoCareersDetailsActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:label="@string/title_activity_socareersdetails">
+        </activity>
+
     </application>
 
 </manifest>

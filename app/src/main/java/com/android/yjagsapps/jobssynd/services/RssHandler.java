@@ -83,6 +83,9 @@ public class RssHandler extends DefaultHandler{
         } else if (qName.equalsIgnoreCase("pubDate")){
             currentJob.setPubDate(chars.toString());
         }
+        else if (qName.equalsIgnoreCase("link")){
+            currentJob.setJobURL(chars.toString());
+        }
 
         /**
         else if (localName.equalsIgnoreCase("published")){

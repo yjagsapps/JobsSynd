@@ -42,6 +42,11 @@ public class JobListAdaptor extends ArrayAdapter<Job> {
         TextView jobPublishedDateView = (TextView) rowView.findViewById(R.id.date);
         jobPublishedDateView.setText(job.getPubDate());
 
+        //Job URL link
+        //The visibility is set to gone in the layout.
+        TextView jobURLLink = (TextView) rowView.findViewById(R.id.jobURL);
+        jobURLLink.setText(job.getJobURL());
+
 
         return rowView;
     }

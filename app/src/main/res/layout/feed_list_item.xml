@@ -11,41 +11,55 @@
         android:layout_centerVertical="true"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
-        <TextView
-        android:id="@+id/title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ellipsize="end"
-        android:maxLines="2"
-        android:text="@string/title"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-        <TextView
-            android:id="@+id/location"
+        <LinearLayout
+            android:id="@+id/layoutJobRow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:ellipsize="end"
-            android:maxLines="1"
-            android:text="@string/title"
-            android:textColor="#FF0000"
-            android:textSize="12sp"
-            android:textStyle="italic"/>
-
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/title"
-            android:layout_alignParentBottom="true"
-            android:layout_below="@+id/title"
-            android:layout_marginTop="5dp"
-            android:padding="2dp"
-            android:text="@string/date"
-            android:textColor="#7F7F7F"
-            android:textSize="12sp" />
+            android:gravity="left"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text="@string/title"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="@string/title"
+                android:textColor="#FF0000"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/title"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/title"
+                android:layout_marginTop="5dp"
+                android:padding="2dp"
+                android:text="@string/date"
+                android:textColor="#7F7F7F"
+                android:textSize="12sp" />
+            <TextView
+                android:id="@+id/jobURL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="2dp"
+                android:text="@string/date"
+                android:textColor="#00FF00"
+                android:textSize="12sp"
+                android:visibility="gone"/>
+        </LinearLayout>
     </LinearLayout>
-
 </RelativeLayout>
