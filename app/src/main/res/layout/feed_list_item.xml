@@ -30,6 +30,7 @@
             android:ellipsize="end"
             android:maxLines="1"
             android:text="@string/title"
+            android:textColor="#FF0000"
             android:textSize="12sp"
             android:textStyle="italic"/>
 
